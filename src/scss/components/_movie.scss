@@ -1,0 +1,35 @@
+.movie {
+    display: flex;
+    padding: 2rem;
+    
+
+    &__name {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $color-tertiary;
+        margin-right: auto;
+
+    }
+
+    &__button {
+        font-size: 1.2rem;
+        color: $color-quinary;
+        text-transform: uppercase;
+        margin: .5rem;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: color .2s;
+
+        &:hover {
+            color: darken($color-quinary, 10);
+        }
+    }
+
+    &--watched {
+        background-color: darken($color-light, 2);
+    }
+
+    &--watched &__name {
+        text-decoration: line-through;
+    }
+}

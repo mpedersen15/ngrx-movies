@@ -1,0 +1,19 @@
+.header {
+    background-color: $header-background-color;
+    color: $color-light;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-quinary;
+
+    &__title {
+        font-weight: 100;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    &__subtitle {
+        font-weight: 100;
+        font-size: 1rem;
+
+    }
+}

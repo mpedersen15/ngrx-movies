@@ -10,7 +10,7 @@ export function movieReducer(state = initialState, action: MovieAction) {
         case MovieActionTypes.DeleteMovie:
             return state.filter(movie => movie.id !== action.payload.id);
         case MovieActionTypes.WatchMovie:
-            return state.map(movie => movie.id === action.payload.id ? { title: movie.title, id: movie.id, watched: true } : movie);
+            return state.map(movie => movie.id === action.payload.id ? { ...movie, watched: !movie.watched } : movie);
         default:
             return state;
     }

@@ -1,0 +1,14 @@
+$color-primary: #339933;
+$color-secondary: #2C302E;
+$color-tertiary: #474A48;
+$color-quaternary : #909590;
+$color-quinary: #9AE19D;
+$color-light: #f3f3f3;
+$color-white: #fff;
+
+
+$site-background-color: $color-primary;
+$container-background-color: $color-light;
+$header-background-color: $color-secondary;
+$input-placeholder-color: lighten($color-secondary, 50);
+$button-background-color: darken($color-quinary, 5);

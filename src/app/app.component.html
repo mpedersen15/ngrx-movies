@@ -1,2 +1,10 @@
-<app-movie-form (addMovie)="addMovie($event)"></app-movie-form>
-<app-movie-list [movies]="movies$ | async"></app-movie-list>
+<div class="container">
+    <div class="header">
+        <h1 class="header__title u-align-center">Movie Reminder</h1>
+        <h3 class="header__subtitle u-align-center">So you stop forgetting what movies to watch</h3>
+    </div>
+    <div class="content">
+            <app-movie-form (addMovie)="addMovie($event)"></app-movie-form>
+            <app-movie-list [movies]="movies$ | async" (deleteMovie)="deleteMovie($event)" (watchMovie)="watchMovie($event)"></app-movie-list>
+    </div>
+</div>

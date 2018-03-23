@@ -26,4 +26,12 @@ export class AppComponent {
       movie: new Movie(this.currentId++, title)
     }));
   }
+
+  deleteMovie(id: number) {
+    this.store.dispatch(new MovieActions.DeleteMovie({ id }));
+  }
+
+  watchMovie(id: number) {
+    this.store.dispatch(new MovieActions.WatchMovie({ id }));
+  }
 }

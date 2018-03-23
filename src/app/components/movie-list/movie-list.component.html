@@ -1,5 +1,9 @@
 <ul class="movie-list">
-  <li class="movie-item" *ngFor="let movie of movies">
-    {{movie.title}}
+  <li class="movie-list__item" *ngFor="let movie of movies">
+    <div class="movie" [class.movie--watched]="movie.watched">
+      <div class="movie__name">{{ movie.title }}</div>
+      <a href="#" class="movie__button" (click)="onWatched(movie.id)">{{ movie.watched ? 'Mark as unwatched': 'Mark as watched'}}</a>
+      <a href="#" class="movie__button" (click)="onDelete(movie.id)">Remove</a>
+    </div>
   </li>
 </ul>

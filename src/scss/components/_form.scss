@@ -1,0 +1,56 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    border-bottom: 1px solid darken($color-light, 10);
+
+    &__control {
+        font-size: inherit;
+        margin-bottom: 2rem;
+        padding: 0.5rem 1.5rem;
+        border: 1px solid darken($color-light, 5);
+        border-radius: 200px;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 .1rem 1rem rgba($color-secondary, 0.2);
+        }
+
+         &::-webkit-input-placeholder { 
+            color: lighten($color-secondary, 50);
+        }
+        
+        &::-moz-placeholder {
+            color: lighten($color-secondary, 50);
+        }
+        
+        &:-ms-input-placeholder { 
+            color: lighten($color-secondary, 50);
+        }
+        
+        &:-moz-placeholder {
+            color: lighten($color-secondary, 50);
+        }
+    }
+
+    &__button {
+        font-size: inherit;
+        text-transform: uppercase;
+        background-color: $button-background-color;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: $color-light;
+        border-radius: 200px;
+        cursor: pointer;
+        margin-bottom: 3rem;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: darken($button-background-color, 5);
+        }
+
+        &:active, &:focus {
+            background-color: darken($button-background-color, 10);
+        }
+    }
+}

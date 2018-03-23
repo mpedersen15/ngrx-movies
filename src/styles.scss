@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import './scss/utils/_variables';
+@import './scss/utils/_helpers';
+
+@import './scss/base/reset';
+@import './scss/base/base';
+@import './scss/base/typography';
+
+@import './scss/components/container';
+@import './scss/components/content';
+@import './scss/components/form';
+@import './scss/components/header';
+@import './scss/components/movie';
+@import './scss/components/movie-list';
+
