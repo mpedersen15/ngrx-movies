@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="movieForm">
+  <div class="form-group">
+    <label>
+      Title: <input class="form-control" type="text" formControlName="title">
+    </label>
+  </div>
+  <button type="submit" [disabled]="movieForm.invalid">Add Movie</button>
+  {{ movieForm.value | json }}
+</form>
