@@ -9,7 +9,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 export class MovieFormComponent implements OnInit {
   movieForm: FormGroup;
   @Output() addMovie = new EventEmitter<String>();
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.buildForm();
   }
 
@@ -19,7 +19,7 @@ export class MovieFormComponent implements OnInit {
   buildForm() {
     this.movieForm = this.fb.group({
       title: ['', Validators.required]
-    })
+    });
   }
 
   onSubmit() {

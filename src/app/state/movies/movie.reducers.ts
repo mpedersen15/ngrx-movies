@@ -4,9 +4,9 @@ import { MovieActionTypes, MovieAction } from './movie.actions';
 export const initialState = [];
 
 export function movieReducer(state = initialState, action: MovieAction) {
-    switch(action.type) {
+    switch (action.type) {
         case MovieActionTypes.AddMovie:
-            return [...state, { ...action.payload.movie, watched: false }]
+            return [...state, { ...action.payload.movie, watched: false }];
         case MovieActionTypes.DeleteMovie:
             return state.filter(movie => movie.id !== action.payload.id);
         case MovieActionTypes.WatchMovie:

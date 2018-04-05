@@ -5,7 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as MovieActions from './state/movies/movie.actions';
 import { Observable } from 'rxjs/Observable';
 interface AppState  {
-  movies: Movie[]
+  movies: Movie[];
 }
 
 @Component({
@@ -14,7 +14,7 @@ interface AppState  {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  currentId: number = 0;
+  currentId = 0;
   movies$: Observable<Array<Movie>>;
 
   constructor(private store: Store<AppState>) {
